@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Contatos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 600px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #ff6b6b;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e85a5a;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .actions button {
+            width: auto;
+            padding: 5px 10px;
+            margin: 2px;
+            font-size: 12px;
+        }
+
+        .delete {
+            background: #e53e3e;
+        }
+
+        .edit {
+            background: #38a169;
+        }
+
+        .search {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Gerenciador de Contatos</h2>
+
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="telefone" placeholder="Telefone">
+        <input type="email" id="email" placeholder="Email">
+
+        <button id="btnAdicionar" onclick="cadastrarContato()">Adicionar Contato</button>
+
+        <input class="search" type="text" id="busca" placeholder="Buscar contato...">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaContatos">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
